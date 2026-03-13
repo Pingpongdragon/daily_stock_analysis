@@ -15,11 +15,28 @@ Analyze your watchlist daily → generate a decision dashboard → push to multi
 
 **Zero-cost deployment** · Runs on GitHub Actions · No server required
 
-[**Quick Start**](#-quick-start) · [**Key Features**](#-key-features) · [**Sample Output**](#-sample-output) · [**Full Guide**](full-guide_EN.md) · [**FAQ**](FAQ_EN.md) · [**Changelog**](CHANGELOG.md)
+[**About**](#-about-this-project) · [**Quick Start**](#-quick-start) · [**Key Features**](#-key-features) · [**Sample Output**](#-sample-output) · [**Full Guide**](full-guide_EN.md) · [**FAQ**](FAQ_EN.md) · [**Changelog**](CHANGELOG.md)
 
 English | [简体中文](../README.md) | [繁體中文](README_CHT.md)
 
 </div>
+
+## 🔍 About This Project
+
+`daily_stock_analysis` is an **AI-powered automated stock analysis system** designed to help individual investors track and make decisions on their A-share, Hong Kong, and US stock watchlists every day.
+
+**What problem does it solve?**
+
+After market close, manually checking technical indicators, searching for relevant news, and deciding on buy/sell timing for each stock is time-consuming and exhausting. This project fully automates that workflow:
+
+1. **Fetch market data** — retrieves K-lines, moving averages, chip distribution, and real-time quotes from AkShare / Tushare / YFinance and other data sources
+2. **Collect news & sentiment** — scrapes the latest stock-related news via Tavily / Bocha / SerpAPI and other search APIs
+3. **AI comprehensive analysis** — calls LLMs (Gemini / Claude / DeepSeek / GPT) to generate a "Decision Dashboard" following built-in trading rules (no chasing highs, trend trading, precise entry/exit levels)
+4. **Multi-channel push** — automatically sends the analysis report to WeChat Work, Feishu, Telegram, DingTalk, Email, Discord, and more
+
+The entire workflow **requires only one trigger per day** (via a scheduled GitHub Actions job — no server required), so you can quickly determine your action plan for the day as soon as you receive the push notification.
+
+> This system provides technical analysis and information aggregation only. It does not constitute investment advice. All trading decisions and associated risks remain the sole responsibility of the user.
 
 ## 💖 Sponsors
 
